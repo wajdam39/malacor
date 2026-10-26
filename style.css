@@ -169,8 +169,10 @@ img { max-width: 100%; display: block; }
   .products { grid-template-columns: repeat(2,1fr); }
   .footer-cols { grid-template-columns: 1fr; }
   .feature-list { grid-template-columns: 1fr; }
-  .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .nav { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+  .header-inner { flex-direction: column; align-items: stretch; gap: 12px; }
+  .logo-link { align-self: flex-start; }
+  .nav { flex-direction: column; gap: 8px; }
+  .nav a { display: block; padding: 8px 12px; border: 1px solid var(--border); border-radius: 4px; background: rgba(18,26,22,0.6); }
 }
 @media (max-width: 560px) {
   .products { grid-template-columns: 1fr; }
