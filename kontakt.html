@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt - MALACOR</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="site-header">
@@ -29,12 +29,11 @@
             <h2>Napisz do nas</h2>
           </div>
         </div>
-        <form class="newsletter" onsubmit="return false;" style="max-width:480px;">
-          <input type="text" placeholder="Imię i nazwisko" style="margin-bottom:8px;">
-          <input type="email" placeholder="Twój adres e-mail" style="margin-bottom:8px;">
-          <textarea placeholder="Wiadomość" style="width:100%;min-height:120px;margin-bottom:8px;padding:10px;border:1px solid var(--border);border-radius:6px;background:var(--bg-2);color:var(--text);"></textarea>
-          <button type="submit">Wyślij</button>
-        </form>
+        <div class="contact-info" style="max-width:480px; display:flex; flex-direction:column; gap:16px;">
+          <div class="feature"><strong>E-mail:</strong> <a href="mailto:kontakt@malacor.pl">kontakt@malacor.pl</a></div>
+          <div class="feature"><strong>Telefon:</strong> <a href="tel:+48000000000">+48 000 000 000</a></div>
+          <p style="color:var(--muted);font-size:14px;margin:8px 0 0;">Godziny kontaktu: pon.–pt. 9:00–17:00. Adres do uzupełnienia.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -45,6 +44,6 @@
       </div>
     </div>
   </footer>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
