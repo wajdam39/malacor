@@ -43,7 +43,13 @@ img { max-width: 100%; display: block; }
 .logo-link { display:inline-flex; align-items:center; gap:10px; }
 .logo-img { height: 40px; width: auto; display:block; }
 .logo-text { font-weight:700; letter-spacing:0.08em; font-size:14px; }
-.nav-toggle { display: none; }
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
 .nav-toggle-label {
   display: none;
   cursor: pointer;
@@ -185,7 +191,13 @@ img { max-width: 100%; display: block; }
   .feature-list { grid-template-columns: 1fr; }
   .header-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   .logo-link { flex: 0 0 auto; }
-  .nav-toggle { display: none; }
+  .nav-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
   .nav-toggle-label { display: inline-block; }
   .nav {
     display: none;
@@ -202,6 +214,7 @@ img { max-width: 100%; display: block; }
   }
   .nav a { display: block; padding: 8px 12px; border: 1px solid var(--border); border-radius: 4px; background: rgba(18,26,22,0.6); }
   .nav-toggle:checked ~ .nav { display: flex; }
+  .site-header.nav-open .nav { display: flex; }
 }
 @media (max-width: 560px) {
   .products { grid-template-columns: 1fr; }
