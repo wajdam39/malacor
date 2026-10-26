@@ -186,11 +186,23 @@ img { max-width: 100%; display: block; }
   .products { grid-template-columns: repeat(2,1fr); }
   .footer-cols { grid-template-columns: 1fr; }
   .feature-list { grid-template-columns: 1fr; }
-  .header-inner { flex-direction: column; align-items: stretch; gap: 12px; }
-  .logo-link { align-self: flex-start; }
-  .nav-details { display: block; }
-  .nav-toggle-label { display: inline-block; align-self: flex-start; }
-  .nav { display: none; flex-direction: column; gap: 8px; }
+  .header-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .logo-link { flex: 0 0 auto; }
+  .nav-details { display: block; flex: 0 0 auto; }
+  .nav-toggle-label { display: inline-block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(10,15,13,0.96);
+    border-bottom: 1px solid var(--border);
+    z-index: 40;
+  }
   .nav a { display: block; padding: 8px 12px; border: 1px solid var(--border); border-radius: 4px; background: rgba(18,26,22,0.6); }
   .nav-details[open] .nav { display: flex; }
 }
