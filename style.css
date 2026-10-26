@@ -44,7 +44,7 @@ img { max-width: 100%; display: block; }
 .logo-img { height: 40px; width: auto; display:block; }
 .logo-text { font-weight:700; letter-spacing:0.08em; font-size:14px; }
 @media (min-width: 961px) {
-  .nav-details { display: contents; }
+  .nav-details { display: flex; align-items: center; }
   .nav-details:not([open]) > .nav { display: flex; }
 }
 .nav-toggle-label {
