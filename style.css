@@ -215,6 +215,7 @@ img { max-width: 100%; display: block; }
   .nav a { display: block; padding: 8px 12px; border: 1px solid var(--border); border-radius: 4px; background: rgba(18,26,22,0.6); }
   .nav-toggle:checked ~ .nav { display: flex; }
   .site-header.nav-open .nav { display: flex; }
+  .nav.is-open { display: flex; }
 }
 @media (max-width: 560px) {
   .products { grid-template-columns: 1fr; }
