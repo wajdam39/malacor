@@ -1,0 +1,16 @@
+# Netlify / Cloudflare Pages headers
+# Long cache for immutable model assets
+/Laser - Mechanizm XY.step
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+  Content-Type: model/step
+
+# Static assets
+/style.css
+  Cache-Control: public, max-age=31536000, immutable
+/script.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: short cache, revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
