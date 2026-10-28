@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; }
 .nav a:hover { color: var(--text); }
 .header-actions { display:flex; gap:16px; align-items:center; font-size:14px; }
 .logo-link { display:inline-flex; align-items:center; gap:10px; }
-.logo-img { height: 40px; width: auto; display:block; border-radius: 8px; }
+.logo-img { height: 60px; width: auto; display:block; border-radius: 8px; }
 .logo-text { font-weight:700; letter-spacing:0.08em; font-size:14px; }
 .nav-toggle {
   position: absolute;
