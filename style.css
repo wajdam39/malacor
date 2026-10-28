@@ -113,6 +113,8 @@ img { max-width: 100%; display: block; }
   border-radius:8px;
   padding: 40px;
   display:flex; flex-direction:column; gap:16px;
+  justify-content: flex-end;
+  aspect-ratio: 4 / 5;
 }
 .card-dark h3 { font-size:24px; margin:0; }
 .card-dark p { color: var(--muted); margin:0; }
@@ -186,6 +188,7 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 960px) {
   .hero-grid, .split, .portfolio, .about { grid-template-columns: 1fr; }
+  .card-dark { aspect-ratio: auto; min-height: 260px; }
   .services { grid-template-columns: 1fr; }
   .products { grid-template-columns: repeat(2,1fr); }
   .footer-cols { grid-template-columns: 1fr; }
