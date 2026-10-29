@@ -165,6 +165,14 @@ def load_image_bytes(path):
 
 def build_glb(obj_path, out_path):
     verts, uvs, norms, faces, mtllib = parse_obj(obj_path)
+    if verts:
+        _v = np.array(verts, dtype=np.float64)
+        _center = (_v.max(axis=0) + _v.min(axis=0)) / 2.0
+        _v = _v - _center
+        _maxdim = float((_v.max(axis=0) - _v.min(axis=0)).max())
+        if _maxdim > 0:
+            _v = _v * (2.0 / _maxdim)
+        verts = _v.tolist()
     materials = {}
     if mtllib and os.path.exists(mtllib):
         materials = parse_mtl(mtllib)
