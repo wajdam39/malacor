@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test GLB - MALACOR</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    body { margin:0; background:#0A0F0D; color:#F4F6F5; font-family:sans-serif; }
+    #mv { width:100vw; height:60vh; display:block; }
+    #log { padding:16px; font-size:13px; white-space:pre-wrap; }
+    .ok { color:#7CFC00; } .err { color:#ff6b6b; }
+  </style>
+</head>
+<body>
+  <model-viewer id="mv" src="modele/glb/clock.glb" camera-controls auto-rotate style="width:100vw;height:60vh;background-color:#0A0F0D"></model-viewer>
+  <div id="log">Ładowanie…</div>
+  <script>
+    const mv = document.getElementById('mv');
+    const log = document.getElementById('log');
+    mv.addEventListener('load', () => { log.innerHTML = '<span class="ok">model-viewer: LOADED OK</span>'; });
+    mv.addEventListener('error', (e) => { log.innerHTML = '<span class="err">model-viewer ERROR: ' + (e.detail && (e.detail.type||e.detail.message) || e.message || JSON.stringify(e)) + '</span>'; });
+  </script>
+</body>
+</html>
