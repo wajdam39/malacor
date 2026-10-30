@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - MALACOR</title>
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
   <header class="site-header">
@@ -31,9 +31,9 @@
         </div>
         <div class="portfolio">
           <div class="project">
-            <div class="project-visual"></div>
+            <img class="project-visual" src="modele/ComfyUI_00001_.webp" alt="Animacja procesu druku 3D" style="object-fit:cover;">
             <div class="project-body">
-              <div class="project-label">PROJEKT / OBUDOWA</div>
+              <div class="project-label">PRZYKŁADOWY PROJEKT / OD MODELU DO PROTOTYPU</div>
               <h3>Lepsze dopasowanie przed produkcją</h3>
               <p>Od modelu CAD do prototypu FDM.</p>
               <div class="project-tags">MODEL CAD / PROTOTYP FDM</div>
@@ -42,7 +42,7 @@
           <div class="project">
             <div class="project-visual"></div>
             <div class="project-body">
-              <div class="project-label">PROJEKT / INŻYNIERIA ODWROTNA</div>
+              <div class="project-label">PRZYKŁADOWY PROJEKT / INŻYNIERIA ODWROTNA</div>
               <h3>Niedostępna część. Nowe możliwości.</h3>
               <p>Odtworzenie zużytego komponentu.</p>
               <div class="project-tags">FIZYCZNA CZĘŚĆ / ODTWORZENIE CAD</div>
@@ -59,141 +59,51 @@
             <h2>Biblioteka modeli</h2>
           </div>
         </div>
-        <div class="portfolio">
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/300C logo grill.glb" alt="300C logo grill" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>300C logo grill</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+        <div class="model-grid">
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/300C logo grill.glb" alt="300C logo grill" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Anet AM8 Cube.glb" alt="Anet AM8 Cube" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Anet AM8 Cube</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Anet AM8 Cube.glb" alt="Anet AM8 Cube" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Anet AM8 Pro.glb" alt="Anet AM8 Pro" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Anet AM8 Pro</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Anet AM8 Pro.glb" alt="Anet AM8 Pro" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Dagger Scabbard.glb" alt="Dagger Scabbard" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Dagger Scabbard</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Dagger Scabbard.glb" alt="Dagger Scabbard" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Dekiel felg 64mm 300C.glb" alt="Dekiel felg 64mm 300C" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Dekiel felg 64mm 300C</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Dekiel felg 64mm 300C.glb" alt="Dekiel felg 64mm 300C" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Dron interceptor.glb" alt="Dron interceptor" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Dron interceptor</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Dron interceptor.glb" alt="Dron interceptor" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Dumbbell all.glb" alt="Dumbbell all" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Dumbbell all</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Dumbbell all.glb" alt="Dumbbell all" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/FANS brelok.glb" alt="FANS brelok" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>FANS brelok</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/FANS brelok.glb" alt="FANS brelok" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Juwenalia PANS 2025 brelok.glb" alt="Juwenalia PANS 2025 brelok" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Juwenalia PANS 2025 brelok</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Juwenalia PANS 2025 brelok.glb" alt="Juwenalia PANS 2025 brelok" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Keychain spojnik.glb" alt="Keychain spojnik" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Keychain spojnik</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Keychain spojnik.glb" alt="Keychain spojnik" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Mechanizm XY.glb" alt="Mechanizm XY" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Mechanizm XY</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Mechanizm XY.glb" alt="Mechanizm XY" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/Sword Scabbard.glb" alt="Sword Scabbard" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>Sword Scabbard</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/Sword Scabbard.glb" alt="Sword Scabbard" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/clock.glb" alt="clock" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>clock</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/clock.glb" alt="clock" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/phone stand.glb" alt="phone stand" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>phone stand</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/phone stand.glb" alt="phone stand" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
-          <div class="project">
-            <model-viewer class="project-visual" src="modele/glb/tablet stand.glb" alt="tablet stand" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
-            <div class="project-body">
-              <div class="project-label">MODEL 3D</div>
-              <h3>tablet stand</h3>
-              <p>Model 3D w formacie GLB. Obróć, przybliż i obejrzyj szczegóły.</p>
-              <div class="project-tags">GLB / 3D</div>
-            </div>
+          <div class="model-card">
+            <model-viewer class="model-viewer" src="modele/glb/tablet stand.glb" alt="tablet stand" auto-rotate camera-controls shadow-intensity="1" environment-image="neutral" loading="lazy" style="width:100%;height:100%;"></model-viewer>
           </div>
         </div>
       </div>
@@ -206,6 +116,7 @@
       </div>
     </div>
   </footer>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="script.js?v=7"></script>
 </body>
 </html>
