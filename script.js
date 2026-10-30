@@ -1,4 +1,9 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
+  // Disable auto-rotate on mobile to save GPU
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('model-viewer').forEach(mv => mv.removeAttribute('auto-rotate'));
+  }
+
   const navToggle = document.getElementById('nav-toggle');
   const siteHeader = document.querySelector('.site-header');
   const navToggleLabel = document.querySelector('.nav-toggle-label');
@@ -49,6 +54,6 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.01, rootMargin: '0px 0px -5% 0px' });
   targets.forEach(el => observer.observe(el));
 });
