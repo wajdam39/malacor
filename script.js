@@ -46,7 +46,10 @@
   }
 
   const targets = document.querySelectorAll('section, .card-dark, .service-card, .product, .project, .feature');
-  targets.forEach(el => el.classList.add('reveal'));
+  targets.forEach(el => {
+    if (el.id === 'modele3d') return;
+    el.classList.add('reveal');
+  });
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
