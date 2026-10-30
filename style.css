@@ -189,7 +189,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 960px) {
   .hero-grid, .split, .portfolio, .about { grid-template-columns: 1fr; }
   .model-grid { grid-template-columns: 1fr; gap: 12px; }
-  .model-card { max-width: 220px; margin: 0 auto; }
+  .model-card { max-width: none; margin: 0; }
   .card-dark { aspect-ratio: auto; min-height: 260px; }
   .services { grid-template-columns: 1fr; }
   .products { grid-template-columns: repeat(2,1fr); }
