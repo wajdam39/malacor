@@ -1,4 +1,4 @@
-﻿"""OBJ + MTL -> GLB converter (preserves colors and textures).
+"""OBJ + MTL -> GLB converter (preserves colors and textures).
 Usage: python obj2glb.py input.obj [output.glb]
 """
 import os, sys, json, struct
@@ -383,7 +383,7 @@ def build_glb(obj_path, out_path):
         f.write(struct.pack("<II", len(bin_data), 0x004E4942))
         f.write(bin_data)
 
-    print("Wrote", out_path, "(" + str(len(bin_data)//1024) + " KB binary)")
+    print('Wrote', out_path.encode('ascii','replace').decode(), '(' + str(len(bin_data)//1024) + ' KB binary)')
 
 
 if __name__ == "__main__":
