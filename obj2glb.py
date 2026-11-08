@@ -178,6 +178,25 @@ def build_glb(obj_path, out_path):
         materials = parse_mtl(mtllib)
     primitives, groups = build_primitives(verts, uvs, norms, faces, materials)
 
+    # Smooth normals: average at shared positions for softer, more realistic shading
+    for _prim in primitives:
+        _pos = _prim["positions"]
+        _nor = _prim["normals"]
+        _groups = {}
+        for i in range(len(_pos)):
+            key = (float(_pos[i][0]), float(_pos[i][1]), float(_pos[i][2]))
+            _groups.setdefault(key, []).append(i)
+        _new_nor = _nor.copy()
+        for _idxs in _groups.values():
+            if len(_idxs) > 1:
+                _avg = _nor[_idxs].mean(axis=0)
+                _ln = float(np.linalg.norm(_avg))
+                if _ln > 0:
+                    _avg = _avg / _ln
+                for i in _idxs:
+                    _new_nor[i] = _avg
+        _prim["normals"] = _new_nor.astype(np.float32)
+
     # Compute normals if missing (per-vertex average of face normals)
     for prim in primitives:
         if np.allclose(prim["normals"], 0):
@@ -288,10 +307,22 @@ def build_glb(obj_path, out_path):
         kd = mtl.get("Kd", [0.8, 0.8, 0.8])
         ks = mtl.get("Ks", [0.0, 0.0, 0.0])
         d = mtl.get("d", 1.0)
-        # metallic/roughness approx
+        # boost color saturation (~30%) so models don't look washed out
+        _avg = (kd[0] + kd[1] + kd[2]) / 3.0
+        kd = [min(1.0, max(0.0, _avg + (c - _avg) * 1.3)) for c in kd]
+        # metallic/roughness: detect metals by name keywords
+        _name = (mtl.get("name") or mat_name or "").lower()
+        _metal_kw = ("stal", "zloto", "zoto", "srebro", "metal", "steel", "gold",
+                     "silver", "chrom", "alum", "brass", "copper", "mosi", "miedz",
+                     "poler", "satyn", "galwan", "zinc", "tytan", "titan")
+        _is_metal = any(k in _name for k in _metal_kw)
         spec = (ks[0] + ks[1] + ks[2]) / 3.0
-        metallic = min(1.0, spec * 2.0)
-        roughness = max(0.1, min(0.95, 1.0 - spec))
+        if _is_metal:
+            metallic = 0.85
+            roughness = 0.25
+        else:
+            metallic = min(1.0, spec * 2.0)
+            roughness = max(0.1, min(0.95, 1.0 - spec)) if spec > 0 else 0.55
         mat = {
             "name": mat_name,
             "pbrMetallicRoughness": {
