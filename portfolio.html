@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - MALACOR</title>
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
   <header class="site-header">
@@ -300,6 +300,25 @@
     </section>
 
   </main>
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Zamknij">✕</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('.lightbox-img');
+    const close = lb.querySelector('.lightbox-close');
+    const closeLB = () => lb.classList.remove('open');
+    close.addEventListener('click', closeLB);
+    lb.addEventListener('click', (e) => { if (e.target === lb) closeLB(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLB(); });
+    document.querySelectorAll('.img-visual').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lb.classList.add('open');
+      });
+    });
+  </script>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom">
